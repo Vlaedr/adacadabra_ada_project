@@ -1,15 +1,12 @@
 # Arab Spring : a revolution through media
 
 # Abstract
-Online media have had a huge impact on the sequence of events leading to the historical period known as the "Arab Spring". Spinn3r is a web-crawled dataset regrouping over 3,8 billion web pages from blog posts, forum discussions, social media, etc... between mid-January and mid-February 2011. In light of current events occurring in Hong Kong, Chile, Lebanon, etc... we found this subject to be relevant since these current happenings follow the footsteps of the Arab Spring with their online media impact. With the use of our dataset we hope to infer and visualize crucial information on the impact of online interactions on the Arab Spring revolutions. We endeavor to express several stories during our research, such as fluctuation of coverage between directly affected countries and external countries and the divergence of opinions according to media locality through sentiment analysis.
+The « Arab Spring » is a historical period dating from the December 2010 until mid-2012 that saw the rise of many revolutions over the Islamic world, starting with Tunisia. As the influence of online media grows more and more every day, we would like to study the impact of these media on the spread of these revolutions across around 20 countries. To do this, we emit the hypothesis that the coverage of key events (such as riots, destitutions, etc…) are correlated to the start of revolutions of countries that are neighboring Tunisia. It would also be interesting to find out how the coverage done by government-owned media differs from independent media (e.g. blog posts, independent newspapers). We are also interested in studying whether media are consistent with the information they give out, according to media types (e.g. official media, blog posts, forum,…). We plan to research these topics by exploring the Spinn3r dataset which contains over 3,8 billion data points.
 
 # Research questions
-* How to select pertinent information from such a massive dataset ?
-* How to work with data in foreign languages ?
-* How does the use of online media has affected the spread of social revolutions in the Islamic world ?
-* How did the Arab Spring affect the following revolutions up to this day ?
-* Can we detect a divergence of opinion about the Arab Spring according to media locality ?
-* How does the news coverage fluctuate between mainstream news and other media such as blog posts, forum discussions,etc... ?
+* What is the correlation between the start of revolutions in countries other than Tunisia and the media coverage in these countries ?
+* What is the proportion of blog, forum and social media posts talking about the riots compared to official media?
+* Is the coverage of the events consistent across media type ? Do mainstream media have a better consistency of coverage than more reactive media types (forums, blog posts, etc…)?
 
 # Dataset
 * The [Spinn3r](https://www.icwsm.org/data/) dataset contains over 3,8 billion web pages including blog posts, forum discussions, social media and more... This is a challenging dataset since its total size is aroung 1,6 TB, thus we plan to use pyspark to process this data that is stored on the EPFL cluster.
@@ -18,9 +15,15 @@ Online media have had a huge impact on the sequence of events leading to the his
 # A list of internal milestones up until project milestone 2
 * Load the massive dataset efficiently
 * Translate non-english data
-* Filter out content not concerning the event of the Arab Spring
-* Perform sentiment analysis on different groups of data (e.g. per locality)
-* Add pertinent visualization for our data story
+* Add localization labels on data points
+    * This can be done by looking up URLs’ suffixes, by scraping metadata from the source, by detecting the language used in articles, blog posts, etc… (e.g. with the langdetect python library)
+* Build a lexicon of keywords that will allow us to find posts mentioning the events of the Arab Spring
+* Classify the data mentioning the Arab Spring as informative posts or reactions to the events
+* We will use NLP techniques to check for similarity between posts so as to check for consistency
+* Once we have the localizations, we can filter out the data points that come countries that are not of interest : we will only keep articles coming from Europe, North Africa and the Middle East.
+* Compute some statistics from our dataset after this filtering: through keyword analysis, we can isolate datapoints mentioning events related to the Arab Spring : thus we can know how many articles mentioning the Arab Spring come from blog posts, how many come from government-owned media, etc…
+* Find the proportion of articles that mention a key event (riots, destitutions, etc…) by country over time and how it correlates to the start of revolutions in countries other than Tunisia. We assume that, if there are more and more articles mentioning key events in other countries, it is likely it will inspire more and more these countries to revolt.
+
 
 # Questions for TAa
 * How is the dataset stored on the EPFL cluster ? Is the data partitionned in several files ?
