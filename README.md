@@ -7,8 +7,9 @@ The « Arab Spring » is a historical period dating from the December 2010 unt
 * ~~What is the correlation between the start of revolutions in countries other than Tunisia and the media coverage in these countries ?~~
 * ~~What is the proportion of blog, forum and social media posts talking about the riots compared to official media?~~
 * ~~Is the coverage of the events consistent across media type ? Do mainstream media have a better consistency of coverage than more reactive media types (forums, blog posts, etc…)?~~
+* Is it possible to infer the beginning of the protests/revolts by examining the media coverage of the countries involved ?
 * What is the relationship between the different websites talking about the Arab Spring using a URL centered network?
-* What is the proportion per country of Arab Spring related entries on the Internet during the month of January 2011 in Europe? ( origin determined by language as most european coutries speak different languages and uses their own url extensions such as ".ch", ".fr" etc...)
+
 
 # Dataset
 * The [Spinn3r](https://www.icwsm.org/data/) dataset contains over 3,8 billion web pages including blog posts, forum discussions, social media and more... This is a challenging dataset since its total size is aroung 1,6 TB, thus we plan to use pyspark to process this data that is stored on the EPFL cluster.
