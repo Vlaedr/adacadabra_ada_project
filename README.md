@@ -38,5 +38,9 @@ The « Arab Spring » is a historical period dating from the December 2010 unt
 * Create the final poster
 * Prepare the final presentation
 
-# Questions for TAa
-* How is the dataset stored on the EPFL cluster ? Is the data partitionned in several files ?
+# Contributions
+
+* Robin Leurent: Writing the report, Spark configuration, LSA, Keyword Extraction, Data pre-processing 
+* Matthieu Baud: Writing the report, Hyperlink Network Analysis
+* Sacha Leblanc: Writing the report, LSA, Hyperlink Network Analysis
+* Alexis Dewaele: Writing the report, Keyword Extraction, Data pre-processing 
