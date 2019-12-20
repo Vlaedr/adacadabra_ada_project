@@ -40,7 +40,7 @@ The « Arab Spring » is a historical period dating from the December 2010 unt
 
 # Contributions
 
-* Robin Leurent: Writing the report, Spark configuration, LSA, Keyword Extraction, Data pre-processing 
+* Robin Leurent: Writing the report, Spark configuration, LSA, Keyword Extraction, Data pre-processing, Arab Spring Event Inference
 * Matthieu Baud: Writing the report, Hyperlink Network Analysis
 * Sacha Leblanc: Writing the report, LSA, Hyperlink Network Analysis
 * Alexis Dewaele: Writing the report, Keyword Extraction, Data pre-processing 
